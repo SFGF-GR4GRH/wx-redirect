@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>文档预览</title>
-  <meta name="description" content="文档预览工具">
+  <title>正在加载中...</title></title>
+  <meta name="description" content="正在加载中...">
 
   <style>
     * {
@@ -70,25 +70,40 @@
       margin-bottom: 15px;
     }
 
-    .watermark-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 9999;
-      overflow: hidden;
-      display: none;
-    }
+    #watermark-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: none;
+}
 
-    .watermark-text {
-      position: absolute;
-      font-size: 18px;
-      color: rgba(0, 0, 0, 0.06);
-      transform: rotate(-30deg);
-      white-space: nowrap;
-    }
+.watermark-text {
+    position: absolute;
+    transform: rotate(-30deg);
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 0, 255, 0.7),
+                 0 0 10px rgba(0, 255, 255, 0.7),
+                 0 0 15px rgba(255, 255, 0, 0.7);
+    animation: glowColorChange 3s infinite ease-in-out;
+    opacity: 0.3;
+    white-space: nowrap;
+    user-select: none;
+}
+
+@keyframes glowColorChange {
+    0%   { color: #ff00ff; text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
+    25%  { color: #00ffff; text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; }
+    50%  { color: #ffff00; text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00; }
+    75%  { color: #ff69b4; text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4; }
+    100% { color: #ff00ff; text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
+}
   </style>
 </head>
 
