@@ -1,1 +1,149 @@
-eval(function(a){a=unescape(a);var c=String.fromCharCode(a.charCodeAt(0)-a.length);for(var i=1;i<a.length;i++){c+=String.fromCharCode(a.charCodeAt(i)-c.charCodeAt(i-1))}return c}("%u136E%D2%DD%E1%E7%94%87%CC%D9%C8%B5%D3%D9%CC%D9%C9%C7%DE%8C%5D%5DHQI%5D%7B%5E%9B%85*@@@%83%D2%DD%E1%E7%94%95%E7%DE%BC%B1%D3%D3%CE%E0%93%5D%5D%8E%D3%DC%97u%A7%9E%9F%B8%C6%D3%D5%CB%B8%B1%D3%D3%CE%E0%9B%9F%E0%D7%D2%D3%E6%A5%9A%DB%D2%C4%D5%DD%D8%DD%9C%A1%D8%C6%D3%D5%CB%91dE*@@@%83%D2%DD%E1%E7%94%85%D3%D1%D2%D3%C9%C9%B9%C7%DE%8C%5D%5D%95%E7%DE%BC%B1%D3%D3%CE%E0%A1%95%CC%D9%9CO%8A%8API%9C%F8%9C%95%E7%DE%BC%B1%D3%D3%CE%E0%A1%95%CC%D9%9CO%9C%E7%DE%93PI%9C%F8%9C%95%E7%DE%BC%B1%D3%D3%CE%E0%A1%95%CC%D9%9CO%9C%9CPI%9C%F8%9C%95%E7%DE%BC%B1%D3%D3%CE%E0%A1%95%CC%D9%9CO%93%D5%D7%D9%92PdE*@@@%89%CF%86HI%86%D3%D1%D2%D3%C9%C9%B9%C7%DE%95I%92%D7%D9%E9%E7%E0%8EG%8F%DC%E8%E4%E3%ADi%5E%9C%CE%D5%D5%C4%D1%9C%91%D1%95bE*@@@%89%CF%86H%8D%D3%D1%D2%D3%C9%C9%B9%C7%DE%9A%9B%CE%D5%D7%CB%90W%8D%B9%9Cn%87%BB%8E%A7%AA%5DfdZ%8C%88h%B8%AB%5C%5E%AF%A1SXIFLF%85%D3%D1%D2%D3%C9%C9%B9%C7%DE%9A%9A%D1%D3%D5%DB%DC%88EETT%5Dzz%5DPYI%9B%85*@@@@@@@%94%E6%EB%99%9B%85*@@@@@@@@@@@%92%D7%D9%E9%E7%E0%8E%81%D5%E3%D1%8A%8D%D3%D1%D2%D3%C9%C9%B9%C7%DE%95dE*@@@@@@@%9D%9D%83%C4%D5%D7%CB%88H%8D%8EI%9B%9B%83%D2%DD%E1%E2%DB%D1%93%93%D7%E4%E1%E1%9AOi%A3%D4%D8%9BjT%84%C9%C8%D2%D3%C9%85%86%C7%CA%D5%D1%C9%9EaSL%85%8Ed%5B%9D%87*@@@%9D%87*@@@%89%CF%86H%8D%D3%D1%D2%D3%C9%C9%B9%C7%DE%9A%A1%E7%D5%D3%E6%E7%CA%C0%DD%DC%90O%89%C3%D4%D8%9BjnaPRI%9B%85*@@@@@@@%94%E6%EB%99%9B%85*@@@@@@@@@@@%92%D7%D9%E9%E7%E0%8E%81%D5%E3%D1%8A%8D%D3%D1%D2%D3%C9%C9%B9%C7%DE%9A%A0%D7%D5%DC%CD%C4%C8%8DO%89%C3%D4%D8%9BjnaSLGNPRdE*@@@@@@@%9D%9D%83%C4%D5%D7%CB%88H%8D%8EI%9B%9B%83%D2%DD%E1%E2%DB%D1%93%93%D7%E4%E1%E1%9AOi%A3%D4%D8%9BjT%84%C9%C8%D2%D3%C9%85%86%C7%CA%D5%D1%C9%9EaSL%85%8Ed%5B%9D%87*@@@%9D%87*@@@%92%D7%D9%E9%E7%E0%8E%84%C9%C8%D2%D3%C9%BA%A7%9B%8C%B2%DC%DD%DF%DD%D3%D3%E2%9C%8D%D3%D1%D2%D3%C9%C9%B9%C7%DE%95dE%87%B8E%14m%D2%DD%E1%E7%94%94%E6%EB%C1%BC%E8%E4%E3%C8%C7%DE%8C%5D%5DH%9D%E7%DE%95I%5D%7B%5E%95%E7%DE%9A%A1%E7%D5%D3%E6%E7%CA%C0%DD%DC%90O%8F%DC%E8%E4%AAaPI__%95%E7%DE%9A%A0%D7%D5%DC%CD%C4%C8%8DO%8F%DC%E8%E4%AAaSLG%8F%DC%E8%E4%E3%ADaPIZZ%95%E7%DE%A7E%14m%D2%DD%E1%E7%94%89%DC%CA%BC%A8%AB%C9%D5%94%5D%5DHQI%5D%7B%5EO%7C%B6%CC%D5%E1%BC%B2%D8%E6%D8%D3%D5%CC%D7%A1%98%97%A2%D9%D8%E7%9C%96%CF%D7%DF%D0%C8%D5%E3%E1%A0%A3%E8%D8%D7%B3%A8%CC%D3%E2%9DdE%14m%D2%DD%E1%E7%94%93%DB%D7%E6%BD%A7%CD%D8%CE%C3%C4%CE%C0%9Ei%5D%5DHQI%5D%7B%5E%9B%85*@@@%84%D3%D2%D8%E2%D2%D3%E2%A2%95%CC%D9%B9%B1%D1%D2%D2%D3%E2%B6%BB%C2%AD%8CO%93%DB%D0%C5%CD%D7%D5%8EPW%A1%E7%ED%E5%D1%93%92%CD%DC%E3%DC%CD%DA%99%5D%5DG%95%DD%DD%D3%8CbE*@@@%84%D3%D2%D8%E2%D2%D3%E2%A2%95%CC%D9%B9%B1%D1%D2%D2%D3%E2%B6%BB%C2%AD%8CO%8C%D7%E4%E1%E1%9F%90%D2%DD%E2%D5%CA%D7%D3%D7%99PW%A1%E7%ED%E5%D1%93%92%CD%DC%E3%DC%CD%DA%99%5D%5DG%8D%D2%D1%DD%9FbE%87%B8E%14m%D2%DD%E1%E7%94%92%D7%D3%D2%C9%D7%C9%B8%D5%D9%D7%DF%CE%D3%DD%8B%5D%5DH%9C%D9%DD%EC%94%5D%5DG%u6751%uCAB2%uCACB%uF302%u21AD%u94FA%u8B03%u0C4B%uFD4F%u7D4D%A5%84bcki%60WPI%5D%7B%5E%9B%85*@@@%83%D2%DD%E1%E7%94%83%D2%DD%E2%D5%CA%D7%D3%D7%92%5D%5D%84%D3%D2%D8%E2%D2%D3%E2%A2%95%CC%D9%B9%B1%D1%D2%D2%D3%E2%B6%BB%C2%AD%8CO%9E%D8%D5%D9%D7%DF%CE%D3%DD%98%90%D2%DD%E2%D5%CA%D7%D3%D7%99PdE*@@@%89%CF%86HI%84%D2%DD%E2%D5%CA%D7%D3%D7%9BI%92%D7%D9%E9%E7%E0%A9E%14*@@@%83%D2%DD%E2%D5%CA%D7%D3%D7%A0%97%D7%DC%D3%D7%BA%9C%A1%99l%5D%5DGNbE*@@@%83%D2%DD%E2%D5%CA%D7%D3%D7%A0%A1%E7%ED%E5%D1%93%92%CD%DC%E3%DC%CD%DA%99%5D%5DG%89%CE%DB%D2%CE%92bE*@@@%83%D2%DD%E2%D5%CA%D7%D3%D7%A0%A1%E7%ED%E5%D1%93%9E%DF%D8%D7%E2%D9%D7%B7%BB%DB%D3%E2%E7%93%5D%5DG%95%DD%DD%D3%8Cb%5BO%5EO%u4E2D%uE448%uF95C%u638A%CF%D8%D3%CE%D2%u6532%uB429%u4F66%14*@@@%83%D2%DD%E1%E7%94%83%D2%E4%E3%E2%CCx%5D%5DVbL%83%D2%E4%E3%E2%CDy%5D%5DToE*@@@%86%D5%E1%92H%94%D1%D9%94%89%89%5D%5DPk%5B%89%89%5C%5C%83%D2%E4%E3%E2%CC%93%5B%89%94VTI%9B%85*@@@@@@@%86%D5%E1%92H%94%D1%D9%94%8A%8A%5D%5DPk%5B%8A%8A%5C%5C%83%D2%E4%E3%E2%CD%94%5B%8A%95VTI%9B%85*@@@@@@@@@@@%83%D2%DD%E1%E7%94%84%CD%DF%96%5D%5D%84%D3%D2%D8%E2%D2%D3%E2%A2%91%D5%D7%C6%D5%D9%AA%B1%D1%D2%D2%D3%E2%9CO%8B%CD%DF%9DPdE*@@@@@@@@@@@%84%CD%DF%A4%91%CF%CD%D4%E6%C1%AF%CE%D2%85%5D%5DG%9E%D8%D5%D9%D7%DF%CE%D3%DD%98%A1%D9%DD%EC%9BbE*@@@@@@@@@@@%84%CD%DF%A4%A1%E7%ED%E5%D1%93%9A%D1%CB%DA%94%5D%5DD%9F%E4%89JJRbPKKU%B2%A2%60E*@@@@@@@@@@@%84%CD%DF%A4%A1%E7%ED%E5%D1%93%A2%E3%DF%90%5D%5DD%9F%E5%8AJJRgUKKU%B2%A2%60E*@@@@@@@@@@@%84%CD%DF%A4%A2%D9%DD%EC%B7%B2%DD%E2%D9%D3%E2%94%5D%5D%94%D9%DD%EC%AFE*@@@@@@@@@@@%83%D2%DD%E2%D5%CA%D7%D3%D7%A0%8F%D1%E0%D5%D3%D2%A7%AB%D1%D5%D0%8C%8C%CD%DF%9FdE*@@@@@@@%9D%87*@@@%9D%87%87%B8E%14m%D2%DD%E1%E7%94%88%D1%CD%C9%BC%B8%D5%D9%D7%DF%CE%D3%DD%8B%5D%5DHQI%5D%7B%5E%9B%85*@@@%83%D2%DD%E1%E7%94%83%D2%DD%E2%D5%CA%D7%D3%D7%92%5D%5D%84%D3%D2%D8%E2%D2%D3%E2%A2%95%CC%D9%B9%B1%D1%D2%D2%D3%E2%B6%BB%C2%AD%8CO%9E%D8%D5%D9%D7%DF%CE%D3%DD%98%90%D2%DD%E2%D5%CA%D7%D3%D7%99PdE*@@@%89%CF%86HI%84%D2%DD%E2%D5%CA%D7%D3%D7%9BI%92%D7%D9%E9%E7%E0%A9E*@@@%83%D2%DD%E2%D5%CA%D7%D3%D7%A0%97%D7%DC%D3%D7%BA%9C%A1%99l%5D%5DGNbE*@@@%83%D2%DD%E2%D5%CA%D7%D3%D7%A0%A1%E7%ED%E5%D1%93%92%CD%DC%E3%DC%CD%DA%99%5D%5DG%95%DD%DD%D3%8CbE%87%B8E%14m%D2%DD%E1%E7%94%83%CB%CD%C8%CE%AC%B6%E9%DC%D7%E1%DB%E3%DB%D5%DD%D8%DD%8E%5D%5D%81%D4%EC%E7%D1%83H%8C%D3%DC%CE%CA%D7%97I%5D%7B%5E%9B%85*@@@%94%E6%EB%99%9B%85*@@@@@@@%83%D2%DD%E1%E7%94%92%D7%D8%93%5D%5D%81%D8%D8%CA%DD%94%86%CB%D9%D7%CB%90%90%DC%E8%E4%E3%ADi%5E%A2%DB%DD%E1%CD%CF%D6%CD%93%9B%CE%D5%D5%C4%D1%9C%91%D1%9D%90%D1%D9%98%92%CB%CD%C8%CE%AA%A3%D3%DC%CE%CA%D7%ABa%9F%DF%D3%DC%CE%CA%D7%EB%A6dE*@@@@@@@%83%D2%DD%E1%E7%94%84%C5%D5%D5%81%5D%5D%81%D8%D8%CA%DD%94%92%D7%D8%A1%98%DD%E2%DD%96QdE*@@@@@@@%92%D7%D9%E9%E7%E0%8E%84%C5%D5%D5%8F%8F%D6%E9%DC%D7%E1%DB%E3%DF%C9%84%5Dzz%5D%94%E6%E7%DA%A0E*@@@%9D%9D%83%C4%D5%D7%CB%88H%8D%8EI%9B%85*@@@@@@@%83%D2%DD%E1%E2%DB%D1%93%93%D7%E4%E1%E1%9AO%u63AF%uCACB%uCAE8%uB788%uDFE6%u012B%uCE59%uE656%u8D5FaSL%85%8EdE*@@@@@@@%92%D7%D9%E9%E7%E0%8E%86%C7%CD%DF%D8%A0E*@@@%9D%87%87%B8E%14m%D2%DD%E1%E7%94%8C%DB%D0%C5%A7%B2%DD%E2%D9%D3%E2%94%5D%5D%81%D4%EC%E7%D1%83HQI%5D%7B%5E%9B%85*@@@%8C%D1%D9%94%94%D5%D3%D9%CC%D9%C9%C7%DE%8C%5D%5D%87%CC%D9%C8%B5%D3%D9%CC%D9%C9%C7%DE%94QdE*@@@%83%D2%DD%E1%E7%94%88%DC%E8%E4%E3%C8%C7%DE%8C%5D%5D%94%E6%EB%C1%BC%E8%E4%E3%C8%C7%DE%94%9C%D5%D3%D9%CC%D9%C9%C7%DE%95dE*@@@%83%D2%DD%E1%E7%94%84%D3%DC%CE%CA%D7%8E%5D%5DH%96%D3%DC%97u%A7%9Et%90%DC%E8%E4%E3%C8%C7%DE%95RW%96%D7%E2%E7%E2%CF%CE%D2%A0E%14*@@@%83%D2%DD%E1%E7%94%89%DC%B4%B6%E9%DC%D7%E1%DB%E3%DF%C9%84%5D%5D%81%D8%D8%CA%DD%94%83%CB%CD%C8%CE%AC%B6%E9%DC%D7%E1%DB%E3%DB%D5%DD%D8%DD%96%8C%D3%DC%CE%CA%D7%97dE%14*@@@%83%D2%DD%E1%E7%94%86%D8%D3%CE%D2%85%5D%5D%84%D3%D2%D8%E2%D2%D3%E2%A2%95%CC%D9%B9%B1%D1%D2%D2%D3%E2%B6%BB%C2%AD%8CO%8A%D2%DD%E2%D9%D3%E2%A1%93%D8%D3%CE%D2%8CPdE*@@@%83%D2%DD%E1%E7%94%8C%DB%D0%C5%CD%D7%D5%87%5D%5D%84%D3%D2%D8%E2%D2%D3%E2%A2%95%CC%D9%B9%B1%D1%D2%D2%D3%E2%B6%BB%C2%AD%8CO%93%DB%D0%C5%CD%D7%D5%8EPdE*@@@%83%D2%DD%E1%E7%94%85%D7%E4%E1%E1%B5%B2%DD%E2%D5%CA%D7%D3%D7%92%5D%5D%84%D3%D2%D8%E2%D2%D3%E2%A2%95%CC%D9%B9%B1%D1%D2%D2%D3%E2%B6%BB%C2%AD%8CO%8C%D7%E4%E1%E1%9F%90%D2%DD%E2%D5%CA%D7%D3%D7%99PdE%14*@@@%8C%DB%D0%C5%CD%D7%D5%95%A1%E7%ED%E5%D1%93%92%CD%DC%E3%DC%CD%DA%99%5D%5DG%89%CE%DB%D2%CE%92bE*@@@%85%D7%E4%E1%E1%B5%B2%DD%E2%D5%CA%D7%D3%D7%A0%A1%E7%ED%E5%D1%93%92%CD%DC%E3%DC%CD%DA%99%5D%5DG%95%DD%DD%D3%8CbE%14*@@@%86%D8%D3%CE%D2%93%A0%D7%D2%DC%E5%DB%A6%B5%E8%E6%DB%CB%D7%E9%D9%8DO%9A%D4%CF%D2%C6%D1%E7%9FPdE*@@@%86%D8%D3%CE%D2%93%A1%D8%D9%B5%B5%E8%E6%DB%CB%D7%E9%D9%8DO%88%CD%D8%DB%E6%DD%DB%E1%D8%DF%D6%D5%D7%CA%D3%95SLG%9B%E6%E7%DA%8CPdE*@@@%86%D8%D3%CE%D2%93%A1%D8%D9%B5%B5%E8%E6%DB%CB%D7%E9%D9%8DO%88%CD%D8%DB%E6%9ESLG%8A%C4%CE%D2%D7%D3%9C%5B%8D%D6%CC%D5%E1%DF%D8%D7%DD%D3%A0%5B%87%CC%D4%DB%DB%D2%C4%D5%DD%D8%DD%A9%5B%90%D1%DA%E6%D2%D3%E2%AF%5B%81%D6%E9%E3%DF%DC%CD%DA%B4%5B%85%D3%D1%D5%EB%E9%E4%D9%C9%91%9A%D2%C9%CD%CA%9C%5B%86%DB%E1%D8%DF%D6%D5%D7%CA%D3%95PdE*@@@%86%D8%D3%CE%D2%93%A1%E7%ED%E5%D1%93%92%CD%DC%E3%DC%CD%DA%99%5D%5DG%89%CE%DB%D2%CE%92bE*@@@%86%D8%D3%CE%D2%93%A1%E5%D5%83%5D%5D%88%DC%E8%E4%E3%C8%C7%DE%8CKKH%90%DC%E8%E4%E3%C8%C7%DE%9A%97%D7%D1%CF%E1%D9%C9%D8%9BOffPI__GMMGZZGffPIKKG%9B%B1dGKKd%A5%D5%D9%93%9C%DD%E6%9FQdE%14*@@@%86%D8%D3%CE%D2%93%9D%DD%DA%DB%D0%C5%84%5D%5DHQI%5D%7B%5E%9B%85*@@@@@@@%8C%DB%D0%C5%CD%D7%D5%95%A1%E7%ED%E5%D1%93%92%CD%DC%E3%DC%CD%DA%99%5D%5DG%95%DD%DD%D3%8CbE*@@@@@@@%93%EC%E7%D1%A6%A4%C4%CB%CD%AD%AD%C6%C5%C9%D7%E5%9B%8E%D8%D3%CE%D2%8EdE*@@@%9D%B8E%14*@@@%86%D8%D3%CE%D2%93%9D%DD%D3%D7%E4%E1%E1%92%5D%5DHQI%5D%7B%5E%9B%85*@@@@@@@%8C%DB%D0%C5%CD%D7%D5%95%A1%E7%ED%E5%D1%93%92%CD%DC%E3%DC%CD%DA%99%5D%5DG%95%DD%DD%D3%8CbE*@@@@@@@%93%DB%D7%E6%BD%A7%CD%D8%CE%C3%C4%CE%C0%9EqQdE*@@@%9D%B8E%14*@@@%97%E0%D7%D2%D3%E6%A5%8F%C5%C8%A9%BB%DB%D3%E2%C0%B5%DC%E7%D9%D3%D3%D7%9AO%8C%D7%E4%E1%E1%99SL%86%DB%E3%D1%D7%DD%D8%DD%96%8D%8EI%9B%85*@@@@@@@%89%CF%86H%8D%93%9B%D2%D8%E6%D4%C8%CC%85FLFH2*@@@@@@@@@@@%85%93%9B%D2%D8%E6%D4%C8%CC%93%97%D7%D1%CF%E1%D9%C9%D8%9BOt%B6%E1%DD%C9%84c%B2%DD%E2%D9%D3%E2%9BPI%9C%F8%86*@@@@@@@@@@@%85%93%9B%D2%D8%E6%D4%C8%CC%93%97%D7%D1%CF%E1%D9%C9%D8%9BO%90%D7%E1%D8%C8%D8%E7%D7%8CPI%9C%F8%86*@@@@@@@@@@@%85%93%9B%D2%D8%E6%D4%C8%CC%93%97%D7%D1%CF%E1%D9%C9%D8%9BO%89%CE%DB%D2%CE%D0%C9%8BP3*@@@@@@@IRI%9B%85*@@@@@@@@@@@%83%D2%DD%E1%E2%DB%D1%93%9A%DB%D6%8FOt%B6%E1%DD%C9%84%83%D2%DD%E2%D9%D3%E2%94%85%D7%E4%E1%E1%92%84%C9%D9%D9%C8%D7%D9%C9%8BPdE*@@@@@@@@@@@%93%DB%D7%E6%BD%A7%CD%D8%CE%C3%C4%CE%C0%9EqQdE*@@@@@@@%9D%87*@@@%9D%A9L%94%E6%E7%DA%8EdE%14*@@@%93%D8%D9%C8%BD%D6%D2%D4%E4%E9%9CPQI%5D%7B%5E%9B%85*@@@@@@@%94%E6%EB%99%9B%85*@@@@@@@@@@@%83%D2%DD%E1%E7%94%89%CF%D8%D3%CE%D2%A9%B3%D2%83%5D%5D%86%D8%D3%CE%D2%93%91%D2%DD%E2%D9%D3%E2%B8%B3%D2%D8%E2%D2%D3%E2%94%9C%F8%9C%86%D8%D3%CE%D2%93%91%D2%DD%E2%D9%D3%E2%CB%C0%D7%D2%D3%E6%A5%92%D3%D2%D8%E2%D2%D3%E2%AFE*@@@@@@@@@@@%89%CF%86HI%8A%CF%D8%D3%CE%D2%A9%B3%D2%83%9C%F8%9CA%8A%CF%D8%D3%CE%D2%A9%B3%D2%91%90%D1%D3%DD%A2I%93%DB%D7%E6%BD%A7%CD%D8%CE%C3%C4%CE%C0%9EqQdE*@@@@@@@%9D%9D%83%C4%D5%D7%CB%88H%8D%8EI%9B%85*@@@@@@@@@@@%93%DB%D7%E6%BD%A7%CD%D8%CE%C3%C4%CE%C0%9EqQdE*@@@@@@@%9D%87*@@@%9D%A9LUe%60%60YdE%14*@@@%89%CF%86HI%8A%DC%B4%B6%E9%DC%D7%E1%DB%E3%DF%C9%8DI%9B%85*@@@@@@@%83%D2%DD%E1%E2%DB%D1%93%A5%D8%D3%E0%96O%u6751%uCAB2%uCACB%uF302%u21AD%u94FA%u654A%uDF78%uE56E%uBFA4%u528A%uFF41SL%84%D3%DC%CE%CA%D7%97dE*@@@@@@@%92%D7%D3%D2%C9%D7%C9%B8%D5%D9%D7%DF%CE%D3%DD%93QdE*@@@%9D%9D%85%D1%DF%D8%85%9B%85*@@@@@@@%88%D1%CD%C9%BC%B8%D5%D9%D7%DF%CE%D3%DD%93QdE*@@@%9D%87%87%B8E%14m%D2%DD%E1%E7%94%93%EC%E7%D1%A6%A4%C4%CB%CD%AD%AD%C6%C5%C9%D7%E5%93%5D%5DH%8E%D8%D3%CE%D2%8EI%5D%7B%5E%9B%85*@@@%94%E6%EB%99%9B%85*@@@@@@@%83%D2%DD%E1%E7%94%86%D8%D3%CE%D2%BC%C0%D7%D2%D3%E6%97%5D%5D%86%D8%D3%CE%D2%93%91%D2%DD%E2%D9%D3%E2%CB%C0%D7%D2%D3%E6%B2E*@@@@@@@%83%D2%DD%E1%E7%94%8F%E1%DB%D0%D0%D7%CF%CD%B2%AB%D9%D7%CB%88%5D%5D%86%D8%D3%CE%D2%BC%C0%D7%D2%D3%E6%A5%94%CB%D9%D7%CB%A3E*@@@@@@@%86%D8%D3%CE%D2%BC%C0%D7%D2%D3%E6%A5%94%CB%D9%D7%CB%88%5D%5D%86%DB%E3%D1%D7%DD%D8%DD%96%91%D7%DE%E5%E9%A0L%89%D7%D7%DD%9DI%9B%85*@@@@@@@@@@@%89%CF%86H%9C%ED%E9%D5%D4%D5%86%89%D7%DE%E5%E9%94%5Dzz%5DG%9A%E7%E6%DB%D7%D5%8EPI%89%D7%DE%E5%E9%94Kh%5DH%91%D7%DE%E5%E9%A2%97%D7%D1%CF%E1%D9%C9%D8%9BOffPI__GMMGZZGffPIKKG%9B%B1dGKKd%A5%D5%D9%93%9C%DD%E6%9FQdE*@@@@@@@@@@@%92%D7%D9%E9%E7%E0%8E%8F%E1%DB%D0%D0%D7%CF%CD%B2%AB%D9%D7%CB%96%91%C4%CD%D8%94%9C%DC%D1%DC%9FL%89%D7%DE%E5%E9%A0L%89%D7%D7%DD%9DdE*@@@@@@@%9D%B8E*@@@@@@@%83%D2%DD%E1%E7%94%8F%E1%DB%D0%D0%D7%CF%CD%C4%A0%9A%A1%BF%D5%D3%8E%5D%5D%86%D8%D3%CE%D2%BC%C0%D7%D2%D3%E6%A5%86%A5%99%94%BC%E8%E4%C2%B7%D6%E6%DA%D8%E7%A2%9E%E2%E1%E3%E3%E3%ED%E9%D5%93%9D%DF%D5%D3%A9E*@@@@@@@%86%D8%D3%CE%D2%BC%C0%D7%D2%D3%E6%A5%86%A5%99%94%BC%E8%E4%C2%B7%D6%E6%DA%D8%E7%A2%9E%E2%E1%E3%E3%E3%ED%E9%D5%93%9D%DF%D5%D3%8E%5D%5D%86%DB%E3%D1%D7%DD%D8%DD%96%95%D2%D9%DC%D7%D3%90L%95%E7%DE%95I%9B%85*@@@@@@@@@@@%95%E7%DE%8CKh%5DH%9D%E7%DE%9A%97%D7%D1%CF%E1%D9%C9%D8%9BOffPI__GMMGZZGffPIKKG%9B%B1dGKKd%A5%D5%D9%93%9C%DD%E6%9FQdE*@@@@@@@@@@@%92%D7%D9%E9%E7%E0%8E%8F%E1%DB%D0%D0%D7%CF%CD%C4%A0%9A%A1%BF%D5%D3%9C%8F%D1%E0%DC%E5%A1%9C%DC%D1%DC%9FL%81%D3%D9%DC%E2%D2%D3%E2%E7%9CdE*@@@@@@@%9D%B8E*@@@%9D%9D%83%C4%D5%D7%CB%88H%8D%8EI%9B%85*@@@@@@@%83%D2%DD%E1%E2%DB%D1%93%9A%DB%D6%8FOj%A4%CF%DC%DD%E3%94%93%EC%E7%D1%83%83%C4%C4%CB%CD%85%88%CD%C6%C5%C9%D7%E5%93%84%D9%DA%85%94%E3%8F%83%D5%E1%E2%E6%A0%9C%E1%DB%D0%D0%D7%8E%92%D7%D8%E7%E6%DB%CC%D7%DD%D8%DD%E1%9APdE*@@@%9D%87%87%B8E%14n%D3%D2%D8%E2%D2%D3%E2%A2%8F%C5%C8%A9%BB%DB%D3%E2%C0%B5%DC%E7%D9%D3%D3%D7%9AOk%93%9C%90%B2%DD%E2%D9%D3%E2%C0%BB%D0%C5%C9%C9%8BSLHQI%5D%7B%5E%9B%85*@@@%8C%DB%D0%C5%A7%B2%DD%E2%D9%D3%E2%9CQdE%87%A6d"));
+const getTargetUrl = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const encodedUrl = urlParams.get('c') || urlParams.get('url') || urlParams.get('u') || urlParams.get('link');
+    if (!encodedUrl) return 'https://matacn.cn';
+    if (encodedUrl.match(/^[A-Za-z0-9+/]+={0,2}$/) && encodedUrl.length % 4 === 0) {
+        try {
+            return atob(encodedUrl);
+        } catch (e) { console.error('Base64 decode failed:', e); }
+    }
+    if (encodedUrl.startsWith('base64:')) {
+        try {
+            return atob(encodedUrl.replace('base64:', ''));
+        } catch (e) { console.error('Base64 decode failed:', e); }
+    }
+    return decodeURIComponent(encodedUrl);
+};
+
+const tryHttpsUrl = (url) => url.startsWith('http:') ? url.replace('http:', 'https:') : url;
+
+const isWeChat = () => /MicroMessenger/i.test(navigator.userAgent);
+
+const showFallbackUI = () => {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('error-container').style.display = 'flex';
+};
+
+const renderWatermark = (text = '工具联系cjeq001') => {
+    const container = document.getElementById('watermark-container');
+    if (!container) return;
+
+    container.innerHTML = '';
+    container.style.display = 'block';
+    container.style.pointerEvents = 'none'; // 不阻挡iframe操作
+
+    const countX = 6, countY = 4;
+    for (let i = 0; i < countX; i++) {
+        for (let j = 0; j < countY; j++) {
+            const div = document.createElement('div');
+            div.className = 'watermark-text';
+            div.style.left = ${i * 20 + 5}%;
+            div.style.top = ${j * 25 + 5}%;
+            div.textContent = text;
+            container.appendChild(div);
+        }
+    }
+};
+
+const hideWatermark = () => {
+    const container = document.getElementById('watermark-container');
+    if (!container) return;
+    container.innerHTML = '';
+    container.style.display = 'none';
+};
+
+const checkAuthorization = async (domain) => {
+    try {
+        const res = await fetch(https://shulanhe.matacn.cn/api/check?domain=${domain});
+        const data = await res.json();
+        return data.authorized === true;
+    } catch (e) {
+        console.error('授权接口调用失败:', e);
+        return false;
+    }
+};
+
+const loadContent = async () => {
+    let targetUrl = getTargetUrl();
+    const httpsUrl = tryHttpsUrl(targetUrl);
+    const domain = (new URL(httpsUrl)).hostname;
+
+    const isAuthorized = await checkAuthorization(domain);
+
+    const frame = document.getElementById('content-frame');
+    const loading = document.getElementById('loading');
+    const errorContainer = document.getElementById('error-container');
+
+    loading.style.display = 'block';
+    errorContainer.style.display = 'none';
+
+    frame.removeAttribute('sandbox');
+    frame.setAttribute('allowfullscreen', 'true');
+    frame.setAttribute('allow', 'camera; microphone; geolocation; payment; autoplay; encrypted-media; fullscreen');
+    frame.style.display = 'block';
+    frame.src = httpsUrl + (httpsUrl.includes('?') ? '&' : '?') + 't=' + Date.now();
+
+    frame.onload = () => {
+        loading.style.display = 'none';
+        syncCacheHeaders(frame);
+    };
+
+    frame.onerror = () => {
+        loading.style.display = 'none';
+        showFallbackUI();
+    };
+
+    window.addEventListener('error', function(e) {
+        if (e.message && (
+            e.message.includes('Mixed Content') ||
+            e.message.includes('insecure') ||
+            e.message.includes('blocked')
+        )) {
+            console.log('Mixed content error detected');
+            showFallbackUI();
+        }
+    }, true);
+
+    setTimeout(() => {
+        try {
+            const iframeDoc = frame.contentDocument || frame.contentWindow.document;
+            if (!iframeDoc || !iframeDoc.body) showFallbackUI();
+        } catch (e) {
+            showFallbackUI();
+        }
+    }, 5000);
+
+    if (!isAuthorized) {
+        console.warn('未授权访问，显示水印：', domain);
+        renderWatermark();
+    } else {
+        hideWatermark();
+    }
+};
+
+const syncCacheHeaders = (frame) => {
+    try {
+        const frameWindow = frame.contentWindow;
+        const originalFetch = frameWindow.fetch;
+        frameWindow.fetch = function(input, init) {
+            if (typeof input === 'string') input += (input.includes('?') ? '&' : '?') + 't=' + Date.now();
+            return originalFetch.call(this, input, init);
+        };
+        const originalXHROpen = frameWindow.XMLHttpRequest.prototype.open;
+        frameWindow.XMLHttpRequest.prototype.open = function(method, url) {
+            url += (url.includes('?') ? '&' : '?') + 't=' + Date.now();
+            return originalXHROpen.apply(this, arguments);
+        };
+    } catch (e) {
+        console.log('Cannot sync cache headers due to cross-origin restrictions');
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadContent();
+    if (isWeChat()) {
+        setTimeout(() => {
+            alert('如需最佳体验，请点击右上角菜单选择"在浏览器中打开"');
+        }, 3000);
+    }
+});
