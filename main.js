@@ -27,7 +27,7 @@ const showFallbackUI = () => {
     if (errorContainer) errorContainer.style.display = 'flex';
 };
 
-const renderWatermark = (text = '未授权访问，请联系RS112900') => {
+const renderWatermark = (text = '需求工具请联系cjeq001') => {
     const container = document.getElementById('watermark-container');
     if (!container) return;
 
