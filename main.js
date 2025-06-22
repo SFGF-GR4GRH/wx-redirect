@@ -20,11 +20,14 @@ const tryHttpsUrl = (url) => url.startsWith('http:') ? url.replace('http:', 'htt
 const isWeChat = () => /MicroMessenger/i.test(navigator.userAgent);
 
 const showFallbackUI = () => {
-    document.getElementById('loading').style.display = 'none';
-    document.getElementById('error-container').style.display = 'flex';
+    const loading = document.getElementById('loading');
+    const errorContainer = document.getElementById('error-container');
+    
+    if (loading) loading.style.display = 'none';
+    if (errorContainer) errorContainer.style.display = 'flex';
 };
 
-const renderWatermark = (text = '工具联系cjeq001') => {
+const renderWatermark = (text = '未授权访问，请联系RS112900') => {
     const container = document.getElementById('watermark-container');
     if (!container) return;
 
@@ -37,8 +40,8 @@ const renderWatermark = (text = '工具联系cjeq001') => {
         for (let j = 0; j < countY; j++) {
             const div = document.createElement('div');
             div.className = 'watermark-text';
-            div.style.left = ${i * 20 + 5}%;
-            div.style.top = ${j * 25 + 5}%;
+            div.style.left = `${i * 20 + 5}%`;
+            div.style.top = `${j * 25 + 5}%`;
             div.textContent = text;
             container.appendChild(div);
         }
@@ -54,7 +57,8 @@ const hideWatermark = () => {
 
 const checkAuthorization = async (domain) => {
     try {
-        const res = await fetch(https://shulanhe.matacn.cn/api/check?domain=${domain});
+        // 修复了URL模板字符串的问题
+        const res = await fetch(`https://shulanhe.matacn.cn/api/check?domain=${domain}`);
         const data = await res.json();
         return data.authorized === true;
     } catch (e) {
@@ -66,13 +70,28 @@ const checkAuthorization = async (domain) => {
 const loadContent = async () => {
     let targetUrl = getTargetUrl();
     const httpsUrl = tryHttpsUrl(targetUrl);
-    const domain = (new URL(httpsUrl)).hostname;
+    
+    // 添加URL解析错误处理
+    let domain;
+    try {
+        domain = (new URL(httpsUrl)).hostname;
+    } catch (e) {
+        console.error('URL解析失败:', e);
+        showFallbackUI();
+        return;
+    }
 
     const isAuthorized = await checkAuthorization(domain);
 
     const frame = document.getElementById('content-frame');
     const loading = document.getElementById('loading');
     const errorContainer = document.getElementById('error-container');
+
+    // 添加DOM元素存在性检查
+    if (!frame || !loading || !errorContainer) {
+        console.error('关键DOM元素缺失');
+        return;
+    }
 
     loading.style.display = 'block';
     errorContainer.style.display = 'none';
