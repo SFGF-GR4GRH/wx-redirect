@@ -11,22 +11,22 @@
             return results ? (results[2] ? decodeURIComponent(results[2]) : '') : '';
         }
 
-        // Base64编码函数
+        // Base64编码函数（处理URL特殊字符）
         function base64Encode(str) {
             return btoa(unescape(encodeURIComponent(str)));
         }
 
         // 立即执行跳转
         const cParam = getUrlParam('c');
+        const currentDomain = window.location.origin;
         const defaultTarget = "https://www.jsir.cn";
         // 对默认目标值进行Base64编码
-        const encodedDefaultTarget = base64Encode(defaultTarget);
+        const encodedDefault = base64Encode(defaultTarget);
         
         // 构建跳转URL
-        // 如果有c参数则使用该参数值，否则使用Base64编码后的默认目标值
         const targetUrl = cParam 
-            ? `https://example.com/shu.htm?c=${encodeURIComponent(cParam)}`
-            : `https://example.com/shu.htm?c=${encodedDefaultTarget}`;
+            ? `${currentDomain}/shu.htm?c=${encodeURIComponent(cParam)}`
+            : `${currentDomain}/shu.htm?c=${encodedDefault}`;
             
         window.location.href = targetUrl;
     </script>
