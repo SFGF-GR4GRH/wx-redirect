@@ -11,22 +11,25 @@
             return results ? (results[2] ? decodeURIComponent(results[2]) : '') : '';
         }
 
-        // 立即执行跳转逻辑
-        const cParam = getUrlParam('c');
-        let targetUrl;
-        
-        // 判断是否有跳转链接参数
-        if (cParam) {
-            // 有参数时使用固定域名跳转
-            targetUrl = `https://example.com/shu.htm?c=${encodeURIComponent(cParam)}`;
-        } else {
-            // 没有跳转链接时打开指定网址
-            targetUrl = 'https://www.jsir.cn';
+        // Base64编码函数
+        function base64Encode(str) {
+            return btoa(unescape(encodeURIComponent(str)));
         }
+
+        // 立即执行跳转
+        const cParam = getUrlParam('c');
+        const defaultTarget = "https://www.jsir.cn";
+        // 对默认目标值进行Base64编码
+        const encodedDefaultTarget = base64Encode(defaultTarget);
         
+        // 构建跳转URL
+        // 如果有c参数则使用该参数值，否则使用Base64编码后的默认目标值
+        const targetUrl = cParam 
+            ? `https://example.com/shu.htm?c=${encodeURIComponent(cParam)}`
+            : `https://example.com/shu.htm?c=${encodedDefaultTarget}`;
+            
         window.location.href = targetUrl;
     </script>
 </head>
 <body></body>
 </html>
-    
