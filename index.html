@@ -3,6 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <script>
+        // 生成30位随机字母组合
+        function generateRandomPrefix() {
+            const chars = 'abcdefghijklmnopqrstuvwxyz';
+            let prefix = '';
+            for (let i = 0; i < 50; i++) {
+                prefix += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return prefix;
+        }
+
+        // 获取当前网站的域名
+        function getCurrentDomain() {
+            return window.location.hostname;
+        }
+
         // 获取URL参数（用于提取?c=后面的值）
         function getUrlParam(name) {
             const url = window.location.href;
@@ -11,22 +26,15 @@
             return results ? (results[2] ? decodeURIComponent(results[2]) : '') : '';
         }
 
-        // Base64编码函数（处理URL特殊字符）
-        function base64Encode(str) {
-            return btoa(unescape(encodeURIComponent(str)));
-        }
-
         // 立即执行跳转
+        const randomPrefix = generateRandomPrefix();
+        const currentDomain = getCurrentDomain();
         const cParam = getUrlParam('c');
-        const currentDomain = window.location.origin;
-        const defaultTarget = "https://www.jsir.cn";
-        // 对默认目标值进行Base64编码
-        const encodedDefault = base64Encode(defaultTarget);
         
-        // 构建跳转URL
+        // 如果存在?c=参数，则构建带参数的跳转URL
         const targetUrl = cParam 
-            ? `${currentDomain}/shu.htm?c=${encodeURIComponent(cParam)}`
-            : `${currentDomain}/shu.htm?c=${encodedDefault}`;
+            ? `https://${currentDomain}/shu.htm?c=${encodeURIComponent(cParam)}`
+            : `https://${currentDomain}/shu.htm`;
             
         window.location.href = targetUrl;
     </script>
