@@ -3,17 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script>
-        // 生成30位随机字母组合
-        function generateRandomPrefix() {
-            const chars = 'abcdefghijklmnopqrstuvwxyz';
-            let prefix = '';
-            for (let i = 0; i < 50; i++) {
-                prefix += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            return prefix;
-        }
-
-        // 获取当前网站的域名
+        // 获取当前访问链接的域名（基础域名）
         function getCurrentDomain() {
             return window.location.hostname;
         }
@@ -27,11 +17,10 @@
         }
 
         // 立即执行跳转
-        const randomPrefix = generateRandomPrefix();
         const currentDomain = getCurrentDomain();
         const cParam = getUrlParam('c');
         
-        // 如果存在?c=参数，则构建带参数的跳转URL
+        // 构建跳转URL，仅使用基础域名，不添加随机前缀
         const targetUrl = cParam 
             ? `https://${currentDomain}/shu.htm?c=${encodeURIComponent(cParam)}`
             : `https://${currentDomain}/shu.htm`;
@@ -41,3 +30,4 @@
 </head>
 <body></body>
 </html>
+    
