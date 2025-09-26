@@ -1,12 +1,7 @@
 const getTargetUrl = () => {
     const urlParams = new URLSearchParams(window.location.search);
-    // 检查是否存在link参数
-    if (!urlParams.has('link')) {
-        throw new Error('缺少必要参数: link');
-    }
-    // 仍然可以使用其他参数作为备选，但link是必须存在的
     const encodedUrl = urlParams.get('c') || urlParams.get('url') || urlParams.get('u') || urlParams.get('link');
-    
+    if (!encodedUrl) return 'https://www.va9.cn';
     if (encodedUrl.match(/^[A-Za-z0-9+/]+={0,2}$/) && encodedUrl.length % 4 === 0) {
         try {
             return atob(encodedUrl);
@@ -35,7 +30,7 @@ const renderWatermark = (text = 'cos工具请联系cjeq001') => {
 
     container.innerHTML = '';
     container.style.display = 'block';
-    container.style.pointerEvents = 'none'; // 不阻挡iframe操作
+    container.style.pointerEvents = 'none';
 
     const countX = 6, countY = 4;
     for (let i = 0; i < countX; i++) {
@@ -57,11 +52,13 @@ const hideWatermark = () => {
     container.style.display = 'none';
 };
 
-const checkAuthorization = async (domain) => {
+// 修复：适配check.php的参数要求，使用link参数并传递完整链接
+const checkAuthorization = async (fullLink) => {
     try {
-        const res = await fetch(`https://github.cos.ddkisw.cn/check.php?domain=${domain}`);
+        const res = await fetch(`https://github.cos.ddkisw.cn/check.php?link=${encodeURIComponent(fullLink)}`);
         const data = await res.json();
-        return data.authorized === true;
+        // 修复：根据check.php返回的code判断授权状态（200为成功）
+        return data.code === 200;
     } catch (e) {
         console.error('授权接口调用失败:', e);
         return false;
@@ -69,85 +66,81 @@ const checkAuthorization = async (domain) => {
 };
 
 const loadContent = async () => {
-    try {
-        let targetUrl = getTargetUrl();
-        const httpsUrl = tryHttpsUrl(targetUrl);
-        const domain = (new URL(httpsUrl)).hostname;
+    let targetUrl = getTargetUrl();
+    const httpsUrl = tryHttpsUrl(targetUrl);
+    const domain = (new URL(httpsUrl)).hostname;
 
-        const isAuthorized = await checkAuthorization(domain);
+    // 修复：传递完整链接给授权检查接口
+    const isAuthorized = await checkAuthorization(httpsUrl);
 
-        const frame = document.getElementById('content-frame');
-        const loading = document.getElementById('loading');
-        const errorContainer = document.getElementById('error-container');
+    const frame = document.getElementById('content-frame');
+    const loading = document.getElementById('loading');
+    const errorContainer = document.getElementById('error-container');
 
-        loading.style.display = 'block';
-        errorContainer.style.display = 'none';
+    loading.style.display = 'block';
+    errorContainer.style.display = 'none';
 
-        frame.removeAttribute('sandbox');
-        frame.setAttribute('allowfullscreen', 'true');
-        frame.setAttribute('allow', 'camera; microphone; geolocation; payment; autoplay; encrypted-media; fullscreen');
-        frame.style.display = 'block';
-        frame.src = httpsUrl + (httpsUrl.includes('?') ? '&' : '?') + 't=' + Date.now();
+    frame.removeAttribute('sandbox');
+    frame.setAttribute('allowfullscreen', 'true');
+    frame.setAttribute('allow', 'camera; microphone; geolocation; payment; autoplay; encrypted-media; fullscreen');
+    frame.style.display = 'block';
+    frame.src = httpsUrl + (httpsUrl.includes('?') ? '&' : '?') + 't=' + Date.now();
 
-        frame.onload = () => {
-            loading.style.display = 'none';
-            syncCacheHeaders(frame);
-        };
+    frame.onload = () => {
+        loading.style.display = 'none';
+        syncCacheHeaders(frame);
+    };
 
-        frame.onerror = () => {
-            loading.style.display = 'none';
-            showFallbackUI();
-        };
+    frame.onerror = () => {
+        loading.style.display = 'none';
+        showFallbackUI();
+    };
 
-        window.addEventListener('error', function(e) {
-            if (e.message && (
-                e.message.includes('Mixed Content') ||
-                e.message.includes('insecure') ||
-                e.message.includes('blocked')
-            )) {
-                console.log('Mixed content error detected');
-                showFallbackUI();
-            }
-        }, true);
-
-        setTimeout(() => {
-            try {
-                const iframeDoc = frame.contentDocument || frame.contentWindow.document;
-                if (!iframeDoc || !iframeDoc.body) showFallbackUI();
-            } catch (e) {
-                showFallbackUI();
-            }
-        }, 5000);
-
-        if (!isAuthorized) {
-            console.warn('未授权访问，显示水印：', domain);
-            renderWatermark();
-        } else {
-            hideWatermark();
-        }
-    } catch (error) {
-        if (error.message === '缺少必要参数: link') {
-            console.error({code: 400, message: error.message});
-            showFallbackUI();
-        } else {
-            console.error('加载内容时出错:', error);
+    window.addEventListener('error', function(e) {
+        if (e.message && (
+            e.message.includes('Mixed Content') ||
+            e.message.includes('insecure') ||
+            e.message.includes('blocked')
+        )) {
+            console.log('Mixed content error detected');
             showFallbackUI();
         }
+    }, true);
+
+    setTimeout(() => {
+        try {
+            const iframeDoc = frame.contentDocument || frame.contentWindow.document;
+            if (!iframeDoc || !iframeDoc.body) showFallbackUI();
+        } catch (e) {
+            showFallbackUI();
+        }
+    }, 5000);
+
+    if (!isAuthorized) {
+        console.warn('未授权访问，显示水印：', domain);
+        renderWatermark();
+    } else {
+        hideWatermark();
     }
 };
 
+// 修复：XMLHttpRequest的open方法参数处理
 const syncCacheHeaders = (frame) => {
     try {
         const frameWindow = frame.contentWindow;
         const originalFetch = frameWindow.fetch;
         frameWindow.fetch = function(input, init) {
-            if (typeof input === 'string') input += (input.includes('?') ? '&' : '?') + 't=' + Date.now();
+            if (typeof input === 'string') {
+                input += (input.includes('?') ? '&' : '?') + 't=' + Date.now();
+            }
             return originalFetch.call(this, input, init);
         };
+        
         const originalXHROpen = frameWindow.XMLHttpRequest.prototype.open;
         frameWindow.XMLHttpRequest.prototype.open = function(method, url) {
-            url += (url.includes('?') ? '&' : '?') + 't=' + Date.now();
-            return originalXHROpen.apply(this, arguments);
+            // 修复：使用修改后的URL并保留其他参数
+            const newUrl = url + (url.includes('?') ? '&' : '?') + 't=' + Date.now();
+            return originalXHROpen.call(this, method, newUrl, ...Array.from(arguments).slice(2));
         };
     } catch (e) {
         console.log('Cannot sync cache headers due to cross-origin restrictions');
