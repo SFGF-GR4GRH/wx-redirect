@@ -30,7 +30,7 @@ const renderWatermark = (text = 'cos工具请联系cjeq001') => {
 
     container.innerHTML = '';
     container.style.display = 'block';
-    container.style.pointerEvents = 'none';
+    container.style.pointerEvents = 'none'; // 不阻挡iframe操作
 
     const countX = 6, countY = 4;
     for (let i = 0; i < countX; i++) {
@@ -52,13 +52,11 @@ const hideWatermark = () => {
     container.style.display = 'none';
 };
 
-// 修复：适配check.php的参数要求，使用link参数并传递完整链接
-const checkAuthorization = async (fullLink) => {
+const checkAuthorization = async (domain) => {
     try {
-        const res = await fetch(`https://github.cos.ddkisw.cn/check.php?link=${encodeURIComponent(fullLink)}`);
+        const res = await fetch(`https://github.cos.ddkisw.cn/check.php?domain=${domain}`);
         const data = await res.json();
-        // 修复：根据check.php返回的code判断授权状态（200为成功）
-        return data.code === 200;
+        return data.authorized === true;
     } catch (e) {
         console.error('授权接口调用失败:', e);
         return false;
@@ -70,8 +68,7 @@ const loadContent = async () => {
     const httpsUrl = tryHttpsUrl(targetUrl);
     const domain = (new URL(httpsUrl)).hostname;
 
-    // 修复：传递完整链接给授权检查接口
-    const isAuthorized = await checkAuthorization(httpsUrl);
+    const isAuthorized = await checkAuthorization(domain);
 
     const frame = document.getElementById('content-frame');
     const loading = document.getElementById('loading');
@@ -124,23 +121,18 @@ const loadContent = async () => {
     }
 };
 
-// 修复：XMLHttpRequest的open方法参数处理
 const syncCacheHeaders = (frame) => {
     try {
         const frameWindow = frame.contentWindow;
         const originalFetch = frameWindow.fetch;
         frameWindow.fetch = function(input, init) {
-            if (typeof input === 'string') {
-                input += (input.includes('?') ? '&' : '?') + 't=' + Date.now();
-            }
+            if (typeof input === 'string') input += (input.includes('?') ? '&' : '?') + 't=' + Date.now();
             return originalFetch.call(this, input, init);
         };
-        
         const originalXHROpen = frameWindow.XMLHttpRequest.prototype.open;
         frameWindow.XMLHttpRequest.prototype.open = function(method, url) {
-            // 修复：使用修改后的URL并保留其他参数
-            const newUrl = url + (url.includes('?') ? '&' : '?') + 't=' + Date.now();
-            return originalXHROpen.call(this, method, newUrl, ...Array.from(arguments).slice(2));
+            url += (url.includes('?') ? '&' : '?') + 't=' + Date.now();
+            return originalXHROpen.apply(this, arguments);
         };
     } catch (e) {
         console.log('Cannot sync cache headers due to cross-origin restrictions');
