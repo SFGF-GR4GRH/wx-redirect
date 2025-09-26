@@ -45,12 +45,7 @@ const renderWatermark = (text = 'cos工具请联系cjeq001') => {
     }
 };
 
-const hideWatermark = () => {
-    const container = document.getElementById('watermark-container');
-    if (!container) return;
-    container.innerHTML = '';
-    container.style.display = 'none';
-};
+// 移除hideWatermark函数，确保水印始终显示
 
 const checkAuthorization = async (domain) => {
     try {
@@ -64,11 +59,36 @@ const checkAuthorization = async (domain) => {
 };
 
 const loadContent = async () => {
-    let targetUrl = getTargetUrl();
-    const httpsUrl = tryHttpsUrl(targetUrl);
-    const domain = (new URL(httpsUrl)).hostname;
+    // 确保水印始终显示，在加载开始就渲染
+    renderWatermark();
+    
+    let targetUrl;
+    try {
+        targetUrl = getTargetUrl();
+    } catch (e) {
+        console.error('获取目标URL失败:', e);
+        showFallbackUI();
+        return;
+    }
 
+    const httpsUrl = tryHttpsUrl(targetUrl);
+    let domain;
+    try {
+        const urlObj = new URL(httpsUrl);
+        domain = urlObj.hostname;
+    } catch (e) {
+        console.error('无效的目标URL:', e);
+        showFallbackUI();
+        return;
+    }
+
+    // 仍进行授权检查但不影响水印显示
     const isAuthorized = await checkAuthorization(domain);
+    if (isAuthorized) {
+        console.log('已授权访问:', domain);
+    } else {
+        console.warn('未授权访问:', domain);
+    }
 
     const frame = document.getElementById('content-frame');
     const loading = document.getElementById('loading');
@@ -77,7 +97,8 @@ const loadContent = async () => {
     loading.style.display = 'block';
     errorContainer.style.display = 'none';
 
-    frame.removeAttribute('sandbox');
+    // 保留必要的安全限制
+    frame.sandbox = 'allow-scripts allow-same-origin allow-popups allow-fullscreen allow-forms';
     frame.setAttribute('allowfullscreen', 'true');
     frame.setAttribute('allow', 'camera; microphone; geolocation; payment; autoplay; encrypted-media; fullscreen');
     frame.style.display = 'block';
@@ -99,26 +120,23 @@ const loadContent = async () => {
             e.message.includes('insecure') ||
             e.message.includes('blocked')
         )) {
-            console.log('Mixed content error detected');
+            console.log('检测到混合内容错误');
             showFallbackUI();
         }
     }, true);
 
+    // 超时检查
     setTimeout(() => {
         try {
             const iframeDoc = frame.contentDocument || frame.contentWindow.document;
-            if (!iframeDoc || !iframeDoc.body) showFallbackUI();
+            if (!iframeDoc || !iframeDoc.body) {
+                console.log('内容加载超时');
+                showFallbackUI();
+            }
         } catch (e) {
             showFallbackUI();
         }
-    }, 5000);
-
-    if (!isAuthorized) {
-        console.warn('未授权访问，显示水印：', domain);
-        renderWatermark();
-    } else {
-        hideWatermark();
-    }
+    }, 8000); // 延长超时时间到8秒
 };
 
 const syncCacheHeaders = (frame) => {
@@ -126,16 +144,19 @@ const syncCacheHeaders = (frame) => {
         const frameWindow = frame.contentWindow;
         const originalFetch = frameWindow.fetch;
         frameWindow.fetch = function(input, init) {
-            if (typeof input === 'string') input += (input.includes('?') ? '&' : '?') + 't=' + Date.now();
+            if (typeof input === 'string') {
+                input += (input.includes('?') ? '&' : '?') + 't=' + Date.now();
+            }
             return originalFetch.call(this, input, init);
         };
+        
         const originalXHROpen = frameWindow.XMLHttpRequest.prototype.open;
         frameWindow.XMLHttpRequest.prototype.open = function(method, url) {
-            url += (url.includes('?') ? '&' : '?') + 't=' + Date.now();
-            return originalXHROpen.apply(this, arguments);
+            const newUrl = url + (url.includes('?') ? '&' : '?') + 't=' + Date.now();
+            return originalXHROpen.call(this, method, newUrl);
         };
     } catch (e) {
-        console.log('Cannot sync cache headers due to cross-origin restrictions');
+        console.log('由于跨域限制，无法同步缓存头:', e);
     }
 };
 
