@@ -54,8 +54,7 @@ const hideWatermark = () => {
 
 const checkAuthorization = async (domain) => {
     try {
-        // 将 ?domain=${domain} 改为 ?link=${domain}
-        const res = await fetch(`https://github.cos.ddkisw.cn/check.php?link=${domain}`);
+        const res = await fetch(`https://github.cos.ddkisw.cn/check.php?domain=${domain}`);
         const data = await res.json();
         return data.authorized === true;
     } catch (e) {
