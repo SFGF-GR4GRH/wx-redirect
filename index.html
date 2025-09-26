@@ -22,8 +22,8 @@
         
         // 构建跳转URL，仅使用基础域名，不添加随机前缀
         const targetUrl = cParam 
-            ? `https://${currentDomain}/shu.htm?c=${encodeURIComponent(cParam)}`
-            : `https://${currentDomain}/shu.htm`;
+            ? `https://${currentDomain}wx-redirect/shu.htm?c=${encodeURIComponent(cParam)}`
+            : `https://${currentDomain}wx-redirect/shu.htm`;
             
         window.location.href = targetUrl;
     </script>
