@@ -52,11 +52,14 @@ const hideWatermark = () => {
     container.style.display = 'none';
 };
 
+// 修正：修复接口参数和授权判断逻辑
 const checkAuthorization = async (domain) => {
     try {
-        const res = await fetch(`https://github.cos.ddkisw.cn/check.php?link==${domain}`);
+        // 1. 修正参数错误：link参数后多了一个等号，改为单个等号
+        const res = await fetch(`https://github.cos.ddkisw.cn/check.php?link=${domain}`);
         const data = await res.json();
-        return data.authorized === true;
+        // 2. 修正判断逻辑：后端成功授权返回code=200，以此作为判断依据
+        return data.code === 200;
     } catch (e) {
         console.error('授权接口调用失败:', e);
         return false;
@@ -113,6 +116,7 @@ const loadContent = async () => {
         }
     }, 5000);
 
+    // 授权成功时隐藏水印，失败时显示
     if (!isAuthorized) {
         console.warn('未授权访问，显示水印：', domain);
         renderWatermark();
